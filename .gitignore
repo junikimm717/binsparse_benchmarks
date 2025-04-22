@@ -6,3 +6,6 @@ results_*
 logs/
 tensors/
 build/
+*.zip
+*.gz
+*.tar

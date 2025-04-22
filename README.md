@@ -3,7 +3,15 @@
 **Note**: All SLURM Jobs must be run from the root directory. Furthermore, you
 **must manually create** the `logs` directory before proceeding.
 
-# Setup
+## Dependencies
+
+You should be on an x86 system with the following **required** libraries:
+
+1. HDF5 (binsparse)
+2. OpenBLAS (splatt benchmarking)
+3. LAPACK (splatt benchmarking)
+
+## Setup
 
 These jobs were intended for use on the COMMIT group's lanka cluster, but
 should be configurable for use elsewhere.
@@ -13,7 +21,7 @@ In order to set up all experiments, you must run `./build.slurm`,
 succession. As these are all bash scripts, there is no strict need to
 use slurm.
 
-# Relevant Experiment Jobs
+## Relevant Experiment Jobs
 
 Currently, we run experiments on all tensors except the three largest, as those
 resulted in OOM issues when attempting to convert to binsparse.
