@@ -1,0 +1,9 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d902a59..3ef39af 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,3 +1,4 @@
++include_directories(/usr/lib/x86_64-linux-gnu/openmpi/include)
+ include(FetchContent)
+ 
+ cmake_minimum_required(VERSION 3.5)
