@@ -5,11 +5,15 @@
 
 ## Dependencies
 
-You should be on an x86 system with the following **required** libraries:
+You should be on an x86 system with glibc and the following **required** libraries/programs:
 
-1. HDF5 (binsparse)
-2. OpenBLAS (splatt benchmarking)
-3. LAPACK (splatt benchmarking)
+1. CMake and a working C++ compiler (building)
+2. HDF5 (binsparse)
+3. OpenBLAS (splatt benchmarking)
+4. LAPACK (splatt benchmarking)
+
+Some of the benchmarking scripts use julia, but this gets automatically
+installed with the build script.
 
 ## Setup
 
