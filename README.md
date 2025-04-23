@@ -1,7 +1,6 @@
 # Frostt Binsparse Benchmarking Repository
 
-**Note**: All SLURM Jobs must be run from the root directory. Furthermore, you
-**must manually create** the `logs` directory before proceeding.
+**Note**: All SLURM Jobs must be run from the root directory.
 
 ## Dependencies
 
@@ -16,6 +15,8 @@ Some of the benchmarking scripts use julia, but this gets automatically
 installed with the build script.
 
 ## Setup
+
+You **must manually create** the `logs` directory before proceeding.
 
 These jobs were intended for use on the COMMIT group's lanka cluster, but
 should be configurable for use elsewhere.
@@ -36,4 +37,8 @@ coo_finch_benchmark_small.slurm
 csf_bsp_benchmark_small.slurm
 csf_finch_benchmark_small.slurm
 splatt_benchmark_small.slurm
+splatt_benchmark_large.slurm
 ```
+
+In order to run these jobs without slurm, run the same files but replacing the
+`slurm` extension with `sh`.
