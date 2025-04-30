@@ -11,6 +11,5 @@
 #SBATCH --qos=commit-main
 #SBATCH --array=1-21
 
-set -x
 head -n $SLURM_ARRAY_TASK_ID files.txt | tail -n 1 | awk '{print $1, $2}' | xargs -n 2 sh -c './build/bin/frostt_tns_bsp "$0" "$1" csf'
 head -n $SLURM_ARRAY_TASK_ID files.txt | tail -n 1 | awk '{print $1, $3}' | xargs -n 2 sh -c './build/bin/frostt_tns_bsp "$0" "$1" coo'
