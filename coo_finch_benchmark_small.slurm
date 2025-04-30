@@ -15,12 +15,12 @@ mkdir -p results_finch
 head -n $SLURM_ARRAY_TASK_ID files.txt\
        	| tail -n 1\
 	| awk '{print $3}'\
+	| sed "s/coo/coo-uncomp/g"\
        	| xargs -L 1 -I {} ./build/bin/julia ./build/benchmark/read_bsp_benchmark.jl {} 21 \
-	>> ./results_finch/coo_$SLURM_ARRAY_TASK_ID.json
+	>> ./results_finch/uncomp_coo_$SLURM_ARRAY_TASK_ID.json
 
 head -n $SLURM_ARRAY_TASK_ID files.txt\
        	| tail -n 1\
 	| awk '{print $3}'\
-	| sed "s/coo/coo-uncomp/g"\
        	| xargs -L 1 -I {} ./build/bin/julia ./build/benchmark/read_bsp_benchmark.jl {} 21 \
-	>> ./results_finch/uncomp_coo_$SLURM_ARRAY_TASK_ID.json
+	>> ./results_finch/coo_$SLURM_ARRAY_TASK_ID.json

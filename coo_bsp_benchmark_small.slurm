@@ -16,7 +16,7 @@ mkdir -p results_bsp
 head -n $SLURM_ARRAY_TASK_ID files.txt\
        	| tail -n 1\
 	| awk '{print $3}'\
-	| sed "s/csf/csf-uncomp/g"\
+	| sed "s/coo/coo-uncomp/g"\
        	| xargs -L 1 -I {} ./build/benchmark/read_bsp_benchmark {} 20 \
 	>> ./results_bsp/uncomp_coo_$SLURM_ARRAY_TASK_ID.json
 
